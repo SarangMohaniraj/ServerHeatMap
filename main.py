@@ -4,20 +4,22 @@ import geopandas
 from matplotlib import pyplot as plt
 
 
-with open("access.log") as f:
+with open("logs/access1.log") as f:
   log= f.read().split("\n")
 
 
 location = []
 reader = geolite2.reader()
-
 for i,line in enumerate(log):
   log[i] = line.split(" ")[0]
   ip = reader.get(log[i])
-  latitude = ip["location"]["latitude"]
-  longitude = ip["location"]["longitude"]
   if ip != None:
-    location.append({ "Longitude": longitude,"Latitude": latitude})
+    try:
+      latitude = ip["location"]["latitude"]
+      longitude = ip["location"]["longitude"]
+      location.append({ "Longitude": longitude,"Latitude": latitude})
+    except:
+      pass
 
 df = pd.DataFrame.from_dict(location)
 gdf = geopandas.GeoDataFrame(df, geometry=geopandas.points_from_xy(df.Longitude, df.Latitude))

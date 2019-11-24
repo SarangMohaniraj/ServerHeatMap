@@ -1,12 +1,19 @@
 attrs==19.3.0
+branca==0.3.1
+certifi==2019.9.11
+chardet==3.0.4
 Click==7.0
 click-plugins==1.1.1
 cligj==0.5.0
 cycler==0.10.0
 descartes==1.1.0
 Fiona==1.8.11
+folium==0.10.0
 geopandas==0.6.2
+idna==2.8
+Jinja2==2.10.3
 kiwisolver==1.1.0
+MarkupSafe==1.1.1
 matplotlib==3.1.2
 maxminddb==1.5.1
 maxminddb-geolite2==2018.703
@@ -19,5 +26,7 @@ python-dateutil==2.8.1
 python-geoip==1.2
 python-geoip-geolite2==2015.303
 pytz==2019.3
+requests==2.22.0
 Shapely==1.6.4.post2
 six==1.13.0
+urllib3==1.25.7
