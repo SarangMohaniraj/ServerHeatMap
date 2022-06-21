@@ -18,7 +18,7 @@ matplotlib==3.1.2
 maxminddb==1.5.1
 maxminddb-geolite2==2018.703
 munch==2.5.0
-numpy==1.17.4
+numpy==1.22.0
 pandas==0.25.3
 pyparsing==2.4.5
 pyproj==2.4.1
